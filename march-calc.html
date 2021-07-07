@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>進軍時間計算機</title>
+    <script src="scripts/calc-march.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin=anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <p class="h1">進軍時間計算機</p>
+      <div class="card p-3 mb-2">
+        <h4>結果の見方</h4>
+        時間がリストになって表示される<br>
+        残り時間がその表示時間になったときに加速を使えばOK<br>
+        「即」 は前回の使用の直後(1秒)にすぐに次の加速を使うことを意味します<br>
+      </div>
+      <div class="d-flex flex-column card p-3 mb-2">
+        <div class="pb-1">
+          <label>
+            <strong>残り時間</strong>
+            <input type="tel" style="width: 4rem;" id="js-start_time_min" maxlength="3">
+            <span>:</span>
+            <input type="tel" style="width: 4rem;" id="js-start_time_sec" maxlength="2">
+          </label>
+        </div>
+        <div class="pb-1">
+          <label>
+            <strong>目標到達時間</strong>
+            <input type="tel" style="width: 4rem;" id="js-required_arrival_time_min" maxlength="3">
+            <span>:</span>
+            <input type="tel" style="width: 4rem;" id="js-required_arrival_time_sec" maxlength="2">
+          </label>
+        </div>
+        <div class="pb-1">
+          <button id="js-calc">計算を実行する</button>
+        </div>
+      </div>
+
+      <div class="card p-3">
+        <p class="h3">結果</p>
+        <div id="js-result"></div>
+      </div>
+    </div>
+  </body>
+</html>
